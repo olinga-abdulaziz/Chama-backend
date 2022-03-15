@@ -2,6 +2,7 @@ const express=require('express')
 const Member=require('./Routes/MembersRoutes')
 const Group=require('./Routes/GroupRoute')
 const dotenv=require('dotenv')
+const Round =require('./Routes/RoundsRoute')
 const mongodb=require('./db/mongoDB')
 const bodyParser=require('body-parser')
 const ejs=require('ejs')
@@ -25,6 +26,7 @@ app.set('views','./views')
 
 app.use('/',Member)
 app.use('/group',Group)
+app.use('/round',Round)
 
 
 

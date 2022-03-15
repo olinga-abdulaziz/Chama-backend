@@ -5,7 +5,7 @@ const router=express.Router()
 
 
 //adding new round
-router.post('/round',async(req,res)=>{
+router.post('/new',async(req,res)=>{
     const round=new Round({
         Round:req.body.Round,
         Members:req.body.Members,
@@ -20,7 +20,7 @@ router.post('/round',async(req,res)=>{
 })
 
 //get all round
-router.get('round/:groupId',async(req,res)=>{
+router.get('all/:groupId',async(req,res)=>{
     try {
         const rounds=await Round.find({groupId:req.params.groupId})
         res.send(rounds)
