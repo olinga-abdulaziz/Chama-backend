@@ -1,6 +1,6 @@
 const mongoose=require('mongoose')
 
-const RoundSchema=new mongoose({
+const RoundSchema=new mongoose.Schema({
     Round:{
         type:String,
         required:true
